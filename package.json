@@ -1,17 +1,18 @@
 {
-  "name": "vanilla-fake-chat",
+  "name": "im-lovely",
   "version": "0.1.0",
   "author": {
     "name": "Ken Huh",
     "email": "ken@vanillacoding.co"
   },
-  "description": "Fake Chat Application React & Redux",
+  "description": "Fake Chat Application React",
   "private": true,
   "dependencies": {
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "react-redux": "^5.0.7",
-    "react-scripts": "2.0.5",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.1.0",
+    "react-router": "^5.0.1",
+    "react-scripts": "^3.0.1",
     "redux": "^4.0.1",
     "redux-logger": "^3.0.6"
   },
