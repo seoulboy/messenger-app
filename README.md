@@ -42,5 +42,5 @@ $ yarn start (or npm start)
 
 ### Advanced
 
-* Reducer Unit Test 작성하기
-* Firebase를 이용하여 실제 채팅 기능 구현하기
+* [Test Code 작성하기](https://gitlab.com/vanilla-coding/bootcamp/wiki/blob/master/tdd/test.md)
+* Firebase Database를 이용하여 실제 채팅 기능 구현하기
