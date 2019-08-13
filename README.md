@@ -57,7 +57,7 @@ https://github.com/reduxjs/redux/tree/master/examples/shopping-cart
     * 채팅 화면에서 다시 채팅방 목록으로 돌아갈 수 있어야 합니다.
     * 여기에 명시되지 않은 부분은 일반적인 채팅 어플리케이션 기준으로 구현하시면 됩니다. (안 읽은 사람 수 같은 고급 기능을 구현할 필요는 없습니다)
 * 인물 사진이 필요한 경우 인터넷에서 자유롭게 구글링하여 사용해주세요.
-* 서버 구현은 필요하지 않습니다. 서버에 데이터를 요청해 받아오는 가상의 메소드를 만들어 사용해주세요.
+* 서버 구현은 필요하지 않습니다. 서버에 데이터를 요청해 받아오는 가상의 메소드를 만들어 사용해주세요. ([참고](https://github.com/reduxjs/redux/tree/master/examples/shopping-cart/src/api))
 * GUI는 큰틀이 변하지 않는 한에서 변화를 주어도 괜찮습니다.
 * React/Redux/React Router을 사용해 SPA(Single Page Application)로 만들어주세요.
 * 화면전환 등 다양한 효과들은 마음껏 보여주셔도 됩니다.
@@ -65,4 +65,4 @@ https://github.com/reduxjs/redux/tree/master/examples/shopping-cart
 ### Advanced
 
 * [Test Code 작성하기](https://gitlab.com/vanilla-coding/bootcamp/wiki/blob/master/tdd/test.md) (Reducer와 Presentational Component 1-2개씩 작성해보시기 바랍니다.)
-* Firebase Database를 이용하여 실제 채팅 데이터 연동하기
+* Firebase Database를 이용하여 실제 채팅 데이터 연동하기 (가짜 API가 아닌 Firebase 데이터베이스를 이용하여 지속 가능한 채팅 어플리케이션을 구축하도록 합니다.)
