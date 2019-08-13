@@ -1,6 +1,6 @@
 # I'm lovely
 
-React를 기반으로 가짜 채팅 어플리케이션을 만들어 보는 과제입니다.
+React/Redux/React Router를 기반으로 가짜 채팅 어플리케이션을 만들어 보는 과제입니다.
 
 ## Setup
 
@@ -20,6 +20,20 @@ $ yarn start (or npm start)
 - HTML 수정: `/public/index.html`를 수정하시면 됩니다.
 - JS 수정: `/src` 디렉토리 내에서 자유롭게 파일/폴더를 생성/수정하여 작업하시면 됩니다.
 - CSS 수정: `/src` 디렉토리 내에서 자유롭게 파일/폴더를 생성/수정하여 작업하시면 됩니다.
+
+## Don't forget
+
+Container Component와 Presentational Component의 차이점에 대해 분명하게 이해하고 적용해보시기 바랍니다.
+
+https://redux.js.org/basics/usage-with-react#presentational-and-container-components
+
+## Redux Example
+
+아래 링크에 들어가시면 Redux를 이용한 샘플 코드를 찾으실 수 있습니다. 디렉토리의 구조나 패턴을 잘 살펴보시고 비슷한 방식으로 구현해보세요.
+
+https://github.com/reduxjs/redux/tree/master/examples/shopping-cart
+
+**Container Component를 과도하게 많이 만들어 남용하지 마세요.**
 
 ## TODO
 
@@ -45,10 +59,10 @@ $ yarn start (or npm start)
 * 인물 사진이 필요한 경우 인터넷에서 자유롭게 구글링하여 사용해주세요.
 * 서버 구현은 필요하지 않습니다. 서버에 데이터를 요청해 받아오는 가상의 메소드를 만들어 사용해주세요.
 * GUI는 큰틀이 변하지 않는 한에서 변화를 주어도 괜찮습니다.
-* React/Redux/React Router을 사용해 SPA(Single Page Application)로 만들어주세요. (React Router의 경우, 설치 필요)
+* React/Redux/React Router을 사용해 SPA(Single Page Application)로 만들어주세요.
 * 화면전환 등 다양한 효과들은 마음껏 보여주셔도 됩니다.
 
 ### Advanced
 
-* [Test Code 작성하기](https://gitlab.com/vanilla-coding/bootcamp/wiki/blob/master/tdd/test.md)
-* Firebase Database를 이용하여 실제 채팅 기능 구현하기
+* [Test Code 작성하기](https://gitlab.com/vanilla-coding/bootcamp/wiki/blob/master/tdd/test.md) (Reducer와 Presentational Component 1-2개씩 작성해보시기 바랍니다.)
+* Firebase Database를 이용하여 실제 채팅 데이터 연동하기
