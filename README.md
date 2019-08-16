@@ -65,4 +65,4 @@ https://github.com/reduxjs/redux/tree/master/examples/shopping-cart
 ### Advanced
 
 * [Test Code 작성하기](https://gitlab.com/vanilla-coding/bootcamp/wiki/blob/master/tdd/test.md) (Reducer와 Presentational Component 1-2개씩 작성해보시기 바랍니다.)
-* Firebase Database를 이용하여 실제 채팅 데이터 연동하기 (가짜 API가 아닌 Firebase 데이터베이스를 이용하여 지속 가능한 채팅 어플리케이션을 구축하도록 합니다.)
+* [Firebase Database](https://firebase.google.com/docs/database/web/start)를 이용하여 실제 채팅 데이터 연동하기 (가짜 API가 아닌 Firebase 데이터베이스를 이용하여 지속 가능한 채팅 어플리케이션을 구축하도록 합니다.)
