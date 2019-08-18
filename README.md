@@ -21,6 +21,10 @@ $ yarn start (or npm start)
 - JS 수정: `/src` 디렉토리 내에서 자유롭게 파일/폴더를 생성/수정하여 작업하시면 됩니다.
 - CSS 수정: `/src` 디렉토리 내에서 자유롭게 파일/폴더를 생성/수정하여 작업하시면 됩니다.
 
+## How to set up Redux
+
+- [Redux Example](https://redux.js.org/basics/example)
+
 ## Don't forget
 
 Container Component와 Presentational Component의 차이점에 대해 분명하게 이해하고 적용해보시기 바랍니다.
