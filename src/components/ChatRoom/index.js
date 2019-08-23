@@ -84,10 +84,7 @@ const ChatRoom = props => {
       </Link>
       <div className='chatroom-container'>
         <div className='chat-window' ref={messagesEnd}>
-          <div className='chat-container'>
-            {messageElements}
-
-          </div>
+          <div className='chat-container'>{messageElements}</div>
         </div>
         <div className='message-input-container'>
           <input
