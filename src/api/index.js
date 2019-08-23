@@ -1,5 +1,6 @@
 import firebase from 'firebase/app';
 import 'firebase/database';
+import data from './chats.json';
 
 // Your web app's Firebase configuration
 var firebaseConfig = {

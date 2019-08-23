@@ -61,11 +61,16 @@ const ChatRoom = props => {
     });
 
   const scrollToBottom = () => {
-    messagesEnd.current.scrollIntoView({ behavior: 'smooth' });
+    messagesEnd.current.scrollIntoView({
+      behavior: 'smooth',
+      block: 'end',
+      inline: 'nearest',
+    });
     inputEl.current.focus();
   };
 
   const handleSendMessage = () => {
+    scrollToBottom();
     onNewMessage(inputEl.current.value, messageTo, messages.length);
     inputEl.current.value = '';
   };
