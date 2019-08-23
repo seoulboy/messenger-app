@@ -1,7 +1,13 @@
 import { connect } from 'react-redux';
 import App from '../components/App';
 import { getChats } from '../api';
-import { initialization, onLoading, openChat, sendMessage, setCurrentMessageList } from '../actions';
+import {
+  initialization,
+  onLoading,
+  openChat,
+  sendMessage,
+  setCurrentMessageList,
+} from '../actions';
 
 const mapStateToProps = state => {
   return {
