@@ -61,11 +61,7 @@ const ChatRoom = props => {
     });
 
   const scrollToBottom = () => {
-    messagesEnd.current.scrollIntoView({
-      behavior: 'smooth',
-      block: 'end',
-      inline: 'nearest',
-    });
+    messagesEnd.current.scrollTop = messagesEnd.current.scrollHeight;
     inputEl.current.focus();
   };
 
@@ -87,14 +83,10 @@ const ChatRoom = props => {
         <BackButton />
       </Link>
       <div className='chatroom-container'>
-        <div className='chat-window'>
+        <div className='chat-window' ref={messagesEnd}>
           <div className='chat-container'>
             {messageElements}
-            <div
-              className='dummy-div'
-              style={{ float: 'left', clear: 'both' }}
-              ref={messagesEnd}
-            />
+
           </div>
         </div>
         <div className='message-input-container'>
