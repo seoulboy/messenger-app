@@ -10,8 +10,6 @@ const mapStateToProps = state => {
     currentLocation: state.currentLocation,
     messageList: state.messageList,
   };
-
-  // 여기선 store의 state를 App의 prop과 mapping해줌.
 };
 
 const mapDispatchToProps = dispatch => {
