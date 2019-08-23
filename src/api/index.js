@@ -21,8 +21,11 @@ var database = firebase.database();
 export const getChats = () => {
   return new Promise((resolve, reject) => {
     database.ref('/').on('value', snapshot => {
-      let articleData = snapshot.val();
-      resolve(articleData);
+      let chatData = snapshot.val();
+      resolve(chatData);
     });
+  }).catch(err => {
+    console.error(err);
+    alert('Failed to fetch chat data!');
   });
 };
