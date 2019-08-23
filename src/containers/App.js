@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import App from '../components/App';
 import { getChats } from '../api';
-import { openChat, sendMessage, setCurrentMessageList } from '../actions';
+import { initialization, onLoading, openChat, sendMessage, setCurrentMessageList } from '../actions';
 
 const mapStateToProps = state => {
   return {
@@ -15,14 +15,9 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     onLoad() {
-      dispatch({
-        type: 'LOADING_ON',
-      });
+      dispatch(onLoading());
       getChats().then(data => {
-        dispatch({
-          type: 'INITIALIZATION',
-          data,
-        });
+        dispatch(initialization(data));
       });
     },
     setCurrentLocation(location) {

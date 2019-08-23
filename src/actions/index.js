@@ -1,10 +1,20 @@
-import * as types from '../constants/ActionTypes';
 import firebase from 'firebase/app';
 import 'firebase/database';
+
+import * as types from '../constants/ActionTypes';
+
+export const initialization = data => ({
+  type: 'INITIALIZATION',
+  data,
+});
 
 export const openChat = location => ({
   type: types.OPEN_CHATROOM,
   location,
+});
+
+export const onLoading = () => ({
+  type: 'LOADING_ON',
 });
 
 export const sendMessage = (message, messageTo, messageId) => {
