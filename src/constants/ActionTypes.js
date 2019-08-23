@@ -1,0 +1,4 @@
+export const OPEN_CHATROOM = 'OPEN_CHATROOM';
+export const SEND_MESSAGE = 'SEND_MESSAGE';
+export const OPEN_CHAT = 'OPEN_CHAT';
+export const SET_CURRENT_MESSAGES = 'SET_CURRENT_MESSAGES';

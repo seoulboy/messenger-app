@@ -1,0 +1,26 @@
+.back-button {
+  background-color: #3c3d4c;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #a1a2a8;
+  border: none;
+  position: absolute;
+  top: 36px;
+  left: 25px;
+  font-size: 15px;
+}
+
+.send-button {
+  width: 65px;
+  height: 40px;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  font-size: 15px;
+  line-height: 40px;
+  background-color: #8f88f6;
+  background-image: -webkit-repeating-linear-gradient(to top, #8f88f6, #7ca8f7);
+  background-image: -moz-repeating-linear-gradient(to top, #8f88f6, #7ca8f7);
+  background-image: -ms-repeating-linear-gradient(to top, #8f88f6, #7ca8f7);
+  background-image: -o-repeating-linear-gradient(to top, #8f88f6, #7ca8f7);
+  background-image: repeating-linear-gradient(to top, #8f88f6, #7ca8f7);
+}

@@ -1,0 +1,22 @@
+.App {
+  background-color: white-smoke;
+  border: 1px solid gray;
+  max-width: 400px;
+}
+
+.current-location {
+  height: 75px;
+  background-color: #3c3d4c;
+  color: #c5c5ca;
+  text-align: center;
+  line-height: 75px;
+  letter-spacing: 3px;
+  font-weight: bolder;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.loading-screen {
+  max-width: 100px;
+  height: 600px;
+  margin: 0 auto;
+}

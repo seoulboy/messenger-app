@@ -1,0 +1,107 @@
+.chatroom-container {
+  height: 634px;
+}
+
+.chat-window {
+  height: 566px;
+  background-color: #eceef5;
+  font-family: 'Noto Sans KR', sans-serif;
+  overflow: scroll;
+}
+
+.chat-container {
+  margin: 0 28px;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+.message-input-container {
+  height: 68px;
+  background: white;
+}
+
+.message-input {
+  margin: 23px;
+  margin-right: 13px;
+  width: 68%;
+  font-size: 15px;
+}
+
+.message-input::placeholder {
+  color: #b2b3b5;
+}
+
+.msg-container {
+  width: 100%;
+  min-height: 54px;
+
+  margin-bottom: 35px;
+}
+
+.user-msg,
+.other-msg {
+  min-height: 54px;
+  width: fit-content;
+  background-color: white;
+  border-radius: 7px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.user-msg {
+  float: right;
+}
+
+.msg-text {
+  text-align: -webkit-auto;
+  line-height: 150%;
+  display: block;
+  margin: 10px 10px;
+  color: grey;
+  padding: 3px 11px;
+  font-size: 14px;
+  max-width: 185px;
+  word-wrap: break-word;
+}
+
+.user-msg-time,
+.other-msg-time {
+  color: #c8c9c9;
+  font-size: 12px;
+  height: 0px;
+}
+
+.user-msg-time {
+  position: absolute;
+  left: -37px;
+  top: calc(100% - 21px);
+}
+.other-msg-time {
+  position: absolute;
+  left: 103%;
+  top: calc(100% - 21px);
+}
+
+.user-profile-pic,
+.other-profile-pic {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  border-radius: 100%;
+}
+
+.other-profile-pic {
+  top: -21px;
+  left: -23px;
+}
+
+.user-profile-pic {
+  top: -23px;
+  left: calc(100% - 24px);
+}
