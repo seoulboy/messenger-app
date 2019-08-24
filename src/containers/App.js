@@ -1,7 +1,13 @@
 import { connect } from 'react-redux';
 import App from '../components/App';
 import { getChats } from '../api';
-import { openChat, sendMessage, setCurrentMessageList } from '../actions';
+import {
+  initialization,
+  onLoading,
+  openChat,
+  sendMessage,
+  setCurrentMessageList,
+} from '../actions';
 
 const mapStateToProps = state => {
   return {
@@ -10,21 +16,14 @@ const mapStateToProps = state => {
     currentLocation: state.currentLocation,
     messageList: state.messageList,
   };
-
-  // 여기선 store의 state를 App의 prop과 mapping해줌.
 };
 
 const mapDispatchToProps = dispatch => {
   return {
     onLoad() {
-      dispatch({
-        type: 'LOADING_ON',
-      });
+      dispatch(onLoading());
       getChats().then(data => {
-        dispatch({
-          type: 'INITIALIZATION',
-          data,
-        });
+        dispatch(initialization(data));
       });
     },
     setCurrentLocation(location) {

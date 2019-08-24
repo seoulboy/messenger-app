@@ -1,6 +1,7 @@
 import firebase from 'firebase/app';
 import 'firebase/database';
 
+
 var firebaseConfig = {
   apiKey: 'AIzaSyCMrmjFwi7QaHaniKPlk_7sh45DRO05p9U',
   authDomain: 'messengerapp-4e820.firebaseapp.com',
@@ -25,3 +26,16 @@ export const getChats = () => {
     alert('Failed to fetch chat data!');
   });
 };
+
+export const sendMessage_FirebaseAPI = (message, messageTo, messageId) => {
+  firebase
+    .database()
+    .ref(`messages/${messageTo}`)
+    .update({
+      [messageId]: {
+        is_user_msg: true,
+        time: new Date().toISOString(),
+        text: message,
+      },
+    });
+}

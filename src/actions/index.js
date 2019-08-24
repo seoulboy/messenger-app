@@ -1,31 +1,30 @@
+import { sendMessage_FirebaseAPI } from '../api';
+
 import * as types from '../constants/ActionTypes';
-import firebase from 'firebase/app';
-import 'firebase/database';
+
+export const initialization = data => ({
+  type: types.INITIALIZATION,
+  data,
+});
 
 export const openChat = location => ({
   type: types.OPEN_CHATROOM,
   location,
 });
 
+export const onLoading = () => ({
+  type: types.LOADING,
+});
+
 export const sendMessage = (message, messageTo, messageId) => {
-  const timeNow = new Date();
-  firebase
-    .database()
-    .ref(`messages/${messageTo}`)
-    .update({
-      [messageId]: {
-        is_user_msg: true,
-        time: timeNow.toISOString(),
-        text: message,
-      },
-    });
+  sendMessage_FirebaseAPI(message, messageTo, messageId);
   return {
     type: types.SEND_MESSAGE,
     messageData: {
       receiver: messageTo,
       messageInfo: {
         is_user_msg: true,
-        time: timeNow.toISOString(),
+        time: new Date().toISOString(),
         text: message,
       },
     },

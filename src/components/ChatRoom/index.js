@@ -3,22 +3,21 @@ import './index.css';
 import { BackButton, SendButton } from '../Buttons';
 import { Link } from 'react-router-dom';
 
-const ChatRoom = props => {
+const ChatRoom = ({
+  messages,
+  onNewMessage,
+  messageTo,
+  userProfile,
+  contactProfile,
+}) => {
   useEffect(() => {
     scrollToBottom();
   });
 
-  const {
-    messages,
-    onNewMessage,
-    messageTo,
-    userProfile,
-    contactProfile,
-  } = props;
   const inputEl = useRef(null);
   const messagesEnd = useRef(null);
 
-  const messageElements = messages
+  const messageElements = messages[messageTo]
     .sort((a, b) => {
       return a.time - b.time;
     })

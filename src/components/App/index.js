@@ -9,11 +9,19 @@ class App extends Component {
     this.props.onLoad();
   }
   render() {
+    const {
+      chatList,
+      currentLocation,
+      isLoading,
+      sendMessageNow,
+      setCurrentLocation,
+    } = this.props;
+
+    const messagesData = chatList.messages
+
     return (
       <div className='App'>
-        <div className='current-location'>
-          {this.props.currentLocation || 'CHAT'}
-        </div>
+        <div className='current-location'>{currentLocation || 'CHAT'}</div>
         <div className='chat-list-container'>
           <Redirect from='/' to='/chatlist' />
           <Switch>
@@ -21,11 +29,10 @@ class App extends Component {
               exact
               path='/chatlist'
               render={() => {
-                this.props.setCurrentLocation(null);
                 return (
                   <ChatList
-                    setCurrentLocation={this.props.setCurrentLocation}
-                    chatListData={this.props.chatList}
+                    setCurrentLocation={setCurrentLocation}
+                    chatListData={chatList}
                   />
                 );
               }}
@@ -34,23 +41,19 @@ class App extends Component {
               path='/chatlist/:user_name'
               render={routeProps => {
                 const contactName = routeProps.match.params.user_name;
-                if (this.props.chatList.messages) {
                   return (
                     <ChatRoom
-                      onNewMessage={this.props.sendMessageNow}
-                      messages={this.props.chatList.messages[contactName]}
+                      onNewMessage={sendMessageNow}
+                      messages={messagesData}
                       messageTo={contactName}
-                      userProfile={this.props.chatList.user_profile}
-                      contactProfile={this.props.chatList.contacts[contactName]}
+                      userProfile={chatList.user_profile}
+                      contactProfile={chatList.contacts[contactName]}
                     />
                   );
-                }
               }}
             />
           </Switch>
-          {this.props.isLoading && (
-            <div className='loading-screen'>I am loading!!!</div>
-          )}
+          {isLoading && <div className='loading-screen'>I am loading!!!</div>}
         </div>
       </div>
     );
