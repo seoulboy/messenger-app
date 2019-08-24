@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.css';
 import { Link } from 'react-router-dom';
-import { sortByRecentMsg, changeSortedRecentMsgListToObj } from '../../utils';
+import { sortChatListByRecent, changeSortedRecentMsgListToObj } from '../../utils';
 
 const ChatList = ({ chatListData, setCurrentLocation }) => {
   let chatListItems = [];
@@ -19,7 +19,7 @@ const ChatList = ({ chatListData, setCurrentLocation }) => {
       sortable.push([user, chatListData.messages[user]]);
     }
 
-    sortable = sortByRecentMsg(sortable);
+    sortable = sortChatListByRecent(sortable);
 
     sortedMessageData = changeSortedRecentMsgListToObj(sortable);
 

@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import './index.css';
 import { BackButton, SendButton } from '../Buttons';
 import { Link } from 'react-router-dom';
+import { sortMessageByTime } from '../../utils';
 
 const ChatRoom = ({
   messages,
@@ -17,11 +18,8 @@ const ChatRoom = ({
   const inputEl = useRef(null);
   const messagesEnd = useRef(null);
 
-  const messageElements = messages[messageTo]
-    .sort((a, b) => {
-      return a.time - b.time;
-    })
-    .map((message, index) => {
+  const messageElements = sortMessageByTime(messages[messageTo]).map(
+    (message, index) => {
       return (
         <div className='msg-container' key={`msg-container${index}`}>
           <div
@@ -57,7 +55,8 @@ const ChatRoom = ({
           </div>
         </div>
       );
-    });
+    }
+  );
 
   const scrollToBottom = () => {
     messagesEnd.current.scrollTop = messagesEnd.current.scrollHeight;

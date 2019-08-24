@@ -1,4 +1,4 @@
-export const sortByRecentMsg = messageList => {
+export const sortChatListByRecent = messageList => {
   return messageList.sort((a, b) => {
     let aTime = Date.parse(a[1][a[1].length - 1].time);
     let bTime = Date.parse(b[1][b[1].length - 1].time);
@@ -11,4 +11,10 @@ export const changeSortedRecentMsgListToObj = sortable => {
     acc[curr[0]] = curr[1];
     return acc;
   }, {});
+};
+
+export const sortMessageByTime = function(messages) {
+  return messages.sort((a, b) => {
+    return a.time - b.time;
+  });
 };
