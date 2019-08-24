@@ -17,7 +17,7 @@ class App extends Component {
       setCurrentLocation,
     } = this.props;
 
-    const messagesData = chatList.messages
+    const messagesData = chatList.messages;
 
     return (
       <div className='App'>
@@ -41,15 +41,15 @@ class App extends Component {
               path='/chatlist/:user_name'
               render={routeProps => {
                 const contactName = routeProps.match.params.user_name;
-                  return (
-                    <ChatRoom
-                      onNewMessage={sendMessageNow}
-                      messages={messagesData}
-                      messageTo={contactName}
-                      userProfile={chatList.user_profile}
-                      contactProfile={chatList.contacts[contactName]}
-                    />
-                  );
+                return (
+                  <ChatRoom
+                    onNewMessage={sendMessageNow}
+                    messages={messagesData}
+                    messageTo={contactName}
+                    userProfile={chatList.user_profile}
+                    contactProfile={chatList.contacts[contactName]}
+                  />
+                );
               }}
             />
           </Switch>
