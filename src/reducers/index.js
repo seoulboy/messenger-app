@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 
 const initialState = {
-  chatListData: [],
+  chatListData: {},
   isLoading: false,
   currentLocation: null,
   messageList: [],
@@ -11,7 +11,7 @@ function loadingReducer(state = initialState.isLoading, action) {
   switch (action.type) {
     case 'INITIALIZATION':
       return false;
-    case 'LOADING_ON':
+    case 'LOADING':
       return true;
     default:
       return state;
@@ -23,13 +23,15 @@ function chatsReducer(state = initialState.chatListData, action) {
     case 'INITIALIZATION':
       return { ...action.data };
     case 'SEND_MESSAGE':
-      const appendedMessageList = {
-        ...state.messages,
-        [action.messageData.receiver]: state.messages[
-          action.messageData.receiver
-        ].concat(action.messageData.messageInfo),
+      return {
+        ...state,
+        messages: {
+          ...state.messages,
+          [action.messageData.receiver]: state.messages[
+            action.messageData.receiver
+          ].concat(action.messageData.messageInfo),
+        },
       };
-      return { ...state, messages: appendedMessageList };
     case 'SET_CURRENT_MESSAGES':
       return action.messageList;
     default:
